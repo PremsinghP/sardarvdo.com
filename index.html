@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index Module || Premsingh Padya</title>
+<img src="https://premsinghpadya.w3spaces.com/images/logo.png?bypass-cache=44352696" title="Sardar V DO Society" width="150" height="150">
+<img src="https://premsinghpadya.w3spaces.com/images/premsinghpadya.png?bypass-cache=29897422" title="Founder of the Society" width="200" height="200" align="right">
+<h6 align="right"><b>Premsingh Padya</b>&nbsp; &nbsp;<br><u>&nbsp; Founder & President</u></h6>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://premsinghpadya.w3spaces.com/images/logo.png?bypass-cache=44352696" type="image/icon type">
+<style>
+
+  
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+body
+{
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+      margin: 0;
+            padding: 0;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            font-family: sans-serif;
+}
+.button1, .button2,.button3,.button4 {
+    border: none;
+  background-color: inherit;
+padding: 50px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family:courier;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+            color: #008000;
+}
+ 
+        button:hover {
+            color: #111;
+            background: #39ff14;
+            box-shadow: 0 0 50px #39ff14;
+        }
+
+.button:hover{background: gray;}
+.button2{color: red;}
+.button1 {color: green;}
+.button3 {color: blue;}
+.button4 {color: #963737;}
+
+</style>
+</head>
+<body>
+<br><br>
+<center><p><h2> Click the Button of your Choice</h2></p><br><br>
+<button class="button button1" id="enter" onclick="window.open('/premsinghpadya/mainpage.html')"    title="Click this button to view Premsingh Padya's Profile."><b>Profile</b></button>
+<button class="button button3" id="blogspot" onclick="window.open('/premsinghpadya/currentjobopening.html')"    title="Click this button to get into the Blog updates Page" ><b>Blog's Page</b></button>
+<button class="button button4" id="linkedin" onclick="window.open('https://www.linkedin.com/company/sardarvdosociety/')"    title="Click this button to get into the Job and internship updates Blog" ><b>Society's Professional Account</b></button>
+<button class="button button2" id="exit" onclick="myFunction3"><b>Exit</b></button>
+</center>
+<script>
+document.getElementById("enter").addEventListener("click", myFunction);
+function myFunction() {
+  var x1 =  document.getElementById('enter').disabled = true;
+}
+document.getElementById("blogspot").addEventListener("click", myFunction1);
+function myFunction1() {
+  var x3 =  document.getElementById('blogspot').disabled = true;
+}
+document.getElementById("linkedin").addEventListener("click", myFunction2);
+function myFunction2() {
+  var x2 =  document.getElementById('linkedin').disabled = true;
+}
+
+document.getElementById("exit").addEventListener("click", myFunction3);
+function myFunction3()
+{
+let now = new Date();
+alert( "Dear Visitor,\n Your Exit Date and Time is : "+now+" \n\n\n Click on OK to Exit out of the Website...!" );
+window.close();  
+}
+document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+</body>
+</html>
