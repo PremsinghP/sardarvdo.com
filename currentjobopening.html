@@ -65,10 +65,25 @@ padding: 10px 20px;
 .button1 {color: green;}
 .button5 {color: white;}
 
+footer {
+position: fixed;
+left: 10px;
+bottom: 5px;
+right: 10px; 
+width: 95%;
+background-color: gray;
+color: white;
+text-align: center;
+
+display: inline-block;
+font-family:courier;
+font-size: 16px;
+margin: 4px 2px;
+}
 
 </style>
 </head>
-<body>
+<body onload="askUser()">
 <br>
 <h1><center>New Job update Button : </center></h1>
 
@@ -91,11 +106,56 @@ function myFunction() {
 document.getElementById("exit").addEventListener("click", myFunction3);
 function myFunction3()
 {
-let now = new Date();
-alert( "Dear Visitor,\n Your Exit Day, Date and Time is : "+now+" \n\n\n Thanks for your time" );
+            var today=new Date();
+            var time=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            window.alert("Exit Time: "+time)
 window.close();  
 }
 document.addEventListener('contextmenu', event => event.preventDefault());
 </script>
+
+
+<script type="text/javascript">
+    function askUser()
+    {
+        let username=sessionStorage.getItem('username');
+        if(username===null)
+        {
+            username=prompt("Enter you Name. ","Premsingh Padya");
+
+        }
+        if(username!=null)
+        {
+            var today=new Date();
+            var time=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            document.getElementById("currentTime").innerHTML="Entry Time: "+time;
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            sessionStorage.setItem('username', username);
+            sessionStorage.setItem('currentTime', currentTime);
+            return 0;
+        }
+        do
+        {
+            username=prompt("Please Enter your Name ");
+        }while(username==null || username=="");
+            var today=new Date();
+            var time=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            document.getElementById("currentTime").innerHTML="Entry Time: "+time;
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            sessionStorage.setItem('username', username);
+            sessionStorage.setItem('currentTime', currentTime);
+            return 0;
+        
+    }
+
+</script>   
+
+</head>
+<footer>
+<h7 id="userpara" style="text-align:right;"></h7><br>
+<h7 id="currentTime" style="text-align:right;"></h7>
+</footer>
 </body>
 </html>
