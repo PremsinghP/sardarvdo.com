@@ -80,9 +80,10 @@ function myFunction2() {
 document.getElementById("exit").addEventListener("click", myFunction3);
 function myFunction3()
 {
-let now = new Date();
-alert( "Dear Visitor,\n Your Exit Date and Time is : "+now+" \n\n\n Click on OK to Exit out of the Website...!" );
-window.close();  
+            var today=new Date();
+            var time=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            window.alert("Exit Time: "+time);
+            window.close();  
 }
 document.addEventListener('contextmenu', event => event.preventDefault());
 </script> 
