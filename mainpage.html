@@ -80,10 +80,24 @@ body {font-family: Arial;}
 }
 
 .topright:hover {color: red;}
+footer {
+position: fixed;
+left: 10px;
+bottom: 5px;
+right: 10px; 
+width: 95%;
+background-color: gray;
+color: white;
+text-align: center;
+
+display: inline-block;
+font-family:courier;
+font-size: 16px;
+margin: 4px 2px;
+}
 </style>
 </head>
-
-<body>
+<body onload="askUser()">
 <br>
 <h2><center>Brief Profile of Premsingh Padya.</center></h2>
 <div class="tab">
@@ -111,7 +125,7 @@ body {font-family: Arial;}
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
 <h3>Email ID: <a href = "mailto: sardarvdo@gmail.com">sardarvdo@gmail.com</a></h3>
 <br><br>
-Address :<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.4270466757903!2d79.32349111436156!3d18.005374389427438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bccb30926ae45f5%3A0x38a97e663e1e30ac!2sSARDAR%20V%20DO%20SOCIETY!5e0!3m2!1sen!2sin!4v1651653979632!5m2!1sen!2sin" width="250" height="120" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="zoom" title="Sardar V DO Society"></iframe> 
+Address :<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.4270466757903!2d79.32349111436156!3d18.005374389427438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bccb30926ae45f5%3A0x38a97e663e1e30ac!2sSARDAR%20V%20DO%20SOCIETY!5e0!3m2!1sen!2sin!4v1651653979632!5m2!1sen!2sin" width="70" height="50" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="zoom" title="Sardar V DO Society"></iframe> 
 </div>
 <style type="text/css">
 #zoom:hover {
@@ -135,19 +149,7 @@ me satisfaction and help me to achieve personal as well as organizational goals.
   <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
   <center>
    
-<b><br>Bachelor of Technology(Computer Science & Engineering)</b><br>
-&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;College: Kakatiya Institute of Technology and Science Warangal.<br>
-&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;University: Kakatiya University.<br>
-<b>&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;Desn: First Class with Distinction</b><hr>
-<b>Intermediate (Maths Physics Chemistry (MPC))</b><br>
-&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;College: Government Junior College, Balnagar<br>
-<b>&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;Desn: First Class with Distinction</b><hr>
-
-
-<b>Secondary School Certificate (SSC)</b><br>
-&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;School: ST Francis School, Velair.<br>
-<b>&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;Desn: First Class with Distinction</b><hr>
-</center>
+<b><br>Engineering Graduate...! (First Class with Distinction)</b><br>
 </div>
 
 <div id="Work" class="tabcontent">
@@ -191,6 +193,51 @@ document.getElementById("defaultOpen").click();
 document.addEventListener('contextmenu', event => event.preventDefault());
 
 </script>
+
+
+
+<script type="text/javascript">
+    function askUser()
+    {
+        let username=sessionStorage.getItem('username');
+        if(username===null)
+        {
+            username=prompt("Enter you Name. ","Premsingh Padya");
+
+        }
+        if(username!=null)
+        {
+            var today=new Date();
+            var time=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            document.getElementById("currentTime").innerHTML="Entry Time: "+time;
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            sessionStorage.setItem('username', username);
+            sessionStorage.setItem('currentTime', currentTime);
+            return 0;
+        }
+        do
+        {
+            username=prompt("Please Enter your Name ");
+        }while(username==null || username=="");
+            var today=new Date();
+            var time=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            document.getElementById("currentTime").innerHTML="Entry Time: "+time;
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            sessionStorage.setItem('username', username);
+            sessionStorage.setItem('currentTime', currentTime);
+            return 0;
+        
+    }
+
+</script>   
+
+</head>
+<footer>
+<h7 id="userpara" style="text-align:right;"></h7><br>
+<h7 id="currentTime" style="text-align:right;"></h7>
+</footer>
 
 </body>
 </html>
