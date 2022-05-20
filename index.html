@@ -87,5 +87,49 @@ function myFunction3()
 }
 document.addEventListener('contextmenu', event => event.preventDefault());
 </script> 
-</body>
+<script type="text/javascript">
+    function askUser()
+    {
+        let username=sessionStorage.getItem('username');
+        if(username===null)
+        {
+            username=prompt("Enter you Name. ","Premsingh Padya");
+
+        }
+        if(username!=null)
+        {
+            var today=new Date();
+            var time=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            document.getElementById("currentTime").innerHTML="Entry Time: "+time;
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            sessionStorage.setItem('username', username);
+            sessionStorage.setItem('currentTime', currentTime);
+            return 0;
+        }
+        do
+        {
+            username=prompt("Please Enter your Name ");
+        }while(username==null || username=="");
+            var today=new Date();
+            var time=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            document.getElementById("currentTime").innerHTML="Entry Time: "+time;
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            sessionStorage.setItem('username', username);
+            sessionStorage.setItem('currentTime', currentTime);
+            return 0;
+        
+    }
+
+</script>   
+
+</head>
+<footer>
+<h7 id="userpara" style="text-align:right;"></h7><br>
+<h7 id="currentTime" style="text-align:right;"></h7>
+</footer>
+
+  
+  </body>
 </html>
