@@ -28,10 +28,10 @@ body
             background-color: #f2f2f2;
             font-family: sans-serif;
 }
-.button1, .button2,.button3,.button4 {
+.button1, .button2,.button3,.button4,.button5, .button6, .button7 {
     border: none;
   background-color: inherit;
-padding: 50px 100px;
+padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -39,6 +39,7 @@ padding: 50px 100px;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  text-align: center;
             color: #008000;
 }
         button:hover {
@@ -51,7 +52,10 @@ padding: 50px 100px;
 .button2{color: red;}
 .button1 {color: green;}
 .button3 {color: blue;}
-.button4 {color: #963737;}
+.button4 {color: navy;}
+.button5 {color: cornflowerblue;}
+.button6 {color: brown;}
+.button7 {color: black;}
 
 footer {
 position: fixed;
@@ -73,13 +77,16 @@ margin: 4px 2px;
 </head>
 <body onload="askUser()">
 <br><br>
-<center><p><h2> Click the Button of your Choice</h2></p><br><br>
-<button class="button button1" id="enter" onclick="window.open('mainpage.html')"    title="Click this button to view Premsingh Padya's Profile."><b>Profile</b></button>
+<!-- <center><p><h2> Click the Button of your Choice</h2></p><br><br> -->
+<button class="button button1" id="enter" onclick="window.open('mainpage.html')"    title="Click this button to view Premsingh Padya's Profile."><b>Founder's Profile</b></button>
 <button class="button button3" id="blogspot" onclick="window.open('currentjobopening.html')"    title="Click this button to get into the Blog updates Page" ><b>Blog's Page</b></button>
-<button class="button button4" id="linkedin" onclick="window.open('https://www.linkedin.com/company/sardarvdosociety/')"    title="Click this button to get into the Job and internship updates Blog" ><b>Society's Professional Account</b></button>
+<button class="button button4" id="linkedin" onclick="window.open('https://www.linkedin.com/company/sardarvdosociety/')"    title="Click this button to get into the Job and internship updates Blog" ><b>Sardar V DO Media</b></button>
+<button class="button button5" id="blogspot" onclick="window.open('board.html')"    title="Click this button to get into the Blog updates Page" ><b>Board Members</b></button>
+<button class="button button6" id="blogspot" onclick="window.open('about.html')"    title="Click this button to get into the Blog updates Page" ><b>About</b></button>
+<button class="button button7" id="blogspot" onclick="window.open('contact.html')"    title="Click this button to get into the Blog updates Page" ><b>Contact Us</b></button>
 <button class="button button2" id="exit" onclick="myFunction3"><b>Exit</b></button>
 </center>
-// <script>
+ <script>
 // document.getElementById("enter").addEventListener("click", myFunction);
 // function myFunction() {
 //   var x1 =  document.getElementById('enter').disabled = true;
