@@ -1,1 +1,141 @@
 
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Index Module || Sardar V DO Society</title>
+<img src="images/logo.png" title="Sardar V DO Society" width="150" height="150">
+<img src="images/premsinghpadya.png" title="Founder of the Society" width="200" height="200" align="right">
+<h6 class="namedesig" align="right" ><b>Premsingh Padya</b>&nbsp; &nbsp;<br><u>&nbsp; Founder & President</u></h6>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/logo.png" type="image/png">
+<style>
+.namedesig
+{
+	color: white;
+}
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+body
+{
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+      margin: 0;
+            padding: 0;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            font-family: sans-serif;
+}
+
+</style>
+
+
+<script type="text/javascript">
+    function askUser()
+    {
+        let username=sessionStorage.getItem('username');
+        if(username===null)
+        {
+            username=prompt("Enter you Name. ","?");
+
+        }
+        if(username!=null)
+        {
+            // var today=new Date();
+            // var time=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            currentTime= new Date().toLocaleString();
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            document.getElementById("userpara1").innerHTML="Welcome "+username+", Happy for you...!";
+            
+            // if(today.getHours()<=12)
+            // {
+            // }
+            // else
+            //target="_self"
+            // {
+            //  document.getElementById("currentTime").innerHTML="Current Time: "+time+" PM";     
+            // }
+
+            sessionStorage.setItem('username', username);
+            document.getElementById("currentTime").innerHTML="Sync Date & Time: "+currentTime;  
+            sessionStorage.setItem('currentTime', currentTime);
+            
+            return 0;
+        }
+        do
+        {
+            username=prompt("Please Enter your Name ");
+        }while(username==null || username=="");
+            //var today=new Date();
+            //var time=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            
+            // document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            // if(today.getHours()<=12)
+            // {
+            //   document.getElementById("currentTime").innerHTML="Current Time: "+time+"AM";  
+            // }
+            // else
+            // {
+            //  document.getElementById("currentTime").innerHTML="Current Time: "+time+"PM";     
+            // }
+
+            
+            // document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            // sessionStorage.setItem('username', username);
+            // sessionStorage.setItem('currentTime', currentTime);
+            // return 0;
+            // currentTime= new Date().toLocaleString();
+            // document.getElementById("userpara").innerHTML="Welcome "+username+", Happy for you...!";
+            // // if(today.getHours()<=12)
+            // // {
+            // //   document.getElementById("currentTime").innerHTML="Current Time: "+time+" AM";  
+            // // }
+            // // else
+            // // {
+            // //  document.getElementById("currentTime").innerHTML="Current Time: "+time+" PM";     
+            // // }
+
+            // document.getElementById("userpara").innerHTML="Welcome "+username+", Work in Progress.!";
+            // sessionStorage.setItem('username', username);
+            // sessionStorage.setItem('currentTime', currentTime);
+            // return 0;
+
+            // var today=new Date();
+            // var time=today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+            document.getElementById("userpara").innerHTML="Welcome "+username+", Work in Progress..!";
+            document.getElementById("userpara1").innerHTML="Welcome "+username+", Work in Progress..!";
+            // if(today.getHours()<=12)
+            // {
+            // }
+            // else
+            // {
+            //  document.getElementById("currentTime").innerHTML="Current Time: "+time+" PM";     
+            // }
+
+            sessionStorage.setItem('username', username);
+            currentTime= new Date().toLocaleString();
+            document.getElementById("currentTime").innerHTML="Sync Date & Time: "+currentTime;  
+            sessionStorage.setItem('currentTime', currentTime);
+            
+        
+    }
+
+
+</script>
+</head>
+<body target=" askUser() ">
+
+<footer>
+<h7 id="userpara1" style="text-align:right;"></h7><emsp>||<emsp>
+<h7 id="currentTime" style="text-align:right;"></h7>
+</footer>
+
+</body>
+
+</html>
